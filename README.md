@@ -29,28 +29,20 @@ This dashboard takes raw network scan data (Nmap XML/text or Wireshark PCAP/JSON
 
 ## 🖥️ Dashboard Screenshots
 
-### Main Dashboard — Hosts + Alert Stats
-- Dark SOC-style UI with live stat cards (Hosts, Critical, High, Medium, Techniques, CVEs)
-- Host inventory table with risk score bars, CVSS scores, and CVE counts
-- Click any host to open a full detail modal with ports, CVEs, alerts, and MITRE techniques
+### Host Inventory — Risk Scores + CVE Counts
+![Hosts](screenshots/Screenshot_25-4-2026_115111_localhost.jpeg)
 
-### Alerts Panel
-- Color-coded alert cards (Critical / High / Medium / Low)
-- Each alert shows the rule triggered, affected host, description, and remediation steps
-- 8 built-in correlation rules including cleartext protocols, exposed databases, C2 port detection
+### Correlated Alerts — Critical / High / Medium
+![Alerts](screenshots/Screenshot_25-4-2026_115255_localhost.jpeg)
 
-### Attack Graph
-- Interactive vis.js network graph
-- Red triangle = attacker node
-- Red/orange boxes = high-risk hosts
-- Blue ellipses = detected services
-- Purple/yellow diamonds = MITRE ATT&CK techniques
-- Drag, zoom, and click nodes to explore
+### MITRE ATT&CK Techniques Mapped
+![MITRE](screenshots/Screenshot_25-4-2026_115314_localhost.jpeg)
 
-### AI Analyst Panel
-- One-click full incident report generation via Claude
-- Chat interface to ask the AI analyst specific questions
-- Threat hunting query generator (Sigma YAML, Splunk SPL, KQL for Sentinel)
+### CVE / CVSS Findings from NVD
+![CVEs](screenshots/Screenshot_25-4-2026_115329_localhost.jpeg)
+
+### Wireshark / PCAP Traffic Analysis
+![Wireshark](screenshots/Screenshot_25-4-2026_115423_localhost.jpeg)
 
 ---
 
