@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -sC -O --script vuln -oX sample_scan.xml 192.168.1.0/24" start="1745600000" startstr="Fri Apr 25 09:00:00 2026" version="7.94">
+
+<host starttime="1745600001" endtime="1745600060">
+  <status state="up" reason="echo-reply"/>
+  <address addr="192.168.1.10" addrtype="ipv4"/>
+  <address addr="00:0C:29:AA:BB:01" addrtype="mac" vendor="VMware"/>
+  <hostnames><hostname name="dc01.corp.local" type="PTR"/></hostnames>
+  <ports>
+    <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service></port>
+    <port protocol="tcp" portid="23"><state state="open"/><service name="telnet" product="Linux telnetd" version=""/></port>
+    <port protocol="tcp" portid="53"><state state="open"/><service name="dns" product="ISC BIND" version="9.11.4"/></port>
+    <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="Apache httpd" version="2.4.6" extrainfo="(CentOS)"><cpe>cpe:/a:apache:http_server:2.4.6</cpe></service></port>
+    <port protocol="tcp" portid="135"><state state="open"/><service name="msrpc" product="Microsoft Windows RPC"/></port>
+    <port protocol="tcp" portid="139"><state state="open"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn"/></port>
+    <port protocol="tcp" portid="389"><state state="open"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" version="6.1"/></port>
+    <port protocol="tcp" portid="445"><state state="open"/><service name="microsoft-ds" product="Windows Server 2016 microsoft-ds"/></port>
+    <port protocol="tcp" portid="3389"><state state="open"/><service name="ms-wbt-server" product="Microsoft Terminal Services"/></port>
+    <port protocol="tcp" portid="5900"><state state="open"/><service name="vnc" product="VNC" version="RFB 003.008"/></port>
+  </ports>
+  <os>
+    <osmatch name="Windows Server 2016" accuracy="96">
+      <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="96"/>
+    </osmatch>
+  </os>
+</host>
+
+<host starttime="1745600061" endtime="1745600120">
+  <status state="up" reason="echo-reply"/>
+  <address addr="192.168.1.20" addrtype="ipv4"/>
+  <address addr="00:0C:29:AA:BB:02" addrtype="mac" vendor="VMware"/>
+  <hostnames><hostname name="webserver01.corp.local" type="PTR"/></hostnames>
+  <ports>
+    <port protocol="tcp" portid="21"><state state="open"/><service name="ftp" product="vsftpd" version="2.3.4"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service></port>
+    <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="5.9p1" extrainfo="protocol 2.0"><cpe>cpe:/a:openbsd:openssh:5.9p1</cpe></service></port>
+    <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="nginx" version="1.10.3"><cpe>cpe:/a:nginx:nginx:1.10.3</cpe></service></port>
+    <port protocol="tcp" portid="443"><state state="open"/><service name="https" product="nginx" version="1.10.3"/></port>
+    <port protocol="tcp" portid="3306"><state state="open"/><service name="mysql" product="MySQL" version="5.5.62"><cpe>cpe:/a:mysql:mysql:5.5.62</cpe></service></port>
+    <port protocol="tcp" portid="8080"><state state="open"/><service name="http" product="Apache Tomcat" version="8.5.32"><cpe>cpe:/a:apache:tomcat:8.5.32</cpe></service></port>
+    <port protocol="tcp" portid="8443"><state state="open"/><service name="https-alt" product="Apache Tomcat" version="8.5.32"/></port>
+  </ports>
+  <os>
+    <osmatch name="Linux 3.10 - 4.11" accuracy="92">
+      <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"/>
+    </osmatch>
+  </os>
+</host>
+
+<host starttime="1745600121" endtime="1745600180">
+  <status state="up" reason="echo-reply"/>
+  <address addr="192.168.1.30" addrtype="ipv4"/>
+  <address addr="00:0C:29:AA:BB:03" addrtype="mac" vendor="VMware"/>
+  <hostnames><hostname name="dbserver01.corp.local" type="PTR"/></hostnames>
+  <ports>
+    <port protocol="tcp" portid="1433"><state state="open"/><service name="ms-sql-s" product="Microsoft SQL Server" version="2014 12.00.2000"><cpe>cpe:/a:microsoft:sql_server:2014</cpe></service></port>
+    <port protocol="tcp" portid="1521"><state state="open"/><service name="oracle" product="Oracle TNS Listener" version="11.2.0.4.0"/></port>
+    <port protocol="tcp" portid="3306"><state state="open"/><service name="mysql" product="MySQL" version="5.7.31"><cpe>cpe:/a:mysql:mysql:5.7.31</cpe></service></port>
+    <port protocol="tcp" portid="5432"><state state="open"/><service name="postgresql" product="PostgreSQL DB" version="9.5.21"/></port>
+    <port protocol="tcp" portid="6379"><state state="open"/><service name="redis" product="Redis key-value store" version="3.2.12"/></port>
+    <port protocol="tcp" portid="27017"><state state="open"/><service name="mongodb" product="MongoDB" version="3.6.8"/></port>
+    <port protocol="tcp" portid="161"><state state="open" protocol="udp"/><service name="snmp" product="net-snmp" version="5.7.2"/></port>
+  </ports>
+  <os>
+    <osmatch name="Linux 4.15" accuracy="88">
+      <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="88"/>
+    </osmatch>
+  </os>
+</host>
+
+<host starttime="1745600181" endtime="1745600240">
+  <status state="up" reason="echo-reply"/>
+  <address addr="192.168.1.40" addrtype="ipv4"/>
+  <address addr="00:0C:29:AA:BB:04" addrtype="mac" vendor="VMware"/>
+  <hostnames><hostname name="devbox.corp.local" type="PTR"/></hostnames>
+  <ports>
+    <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="8.2p1"/></port>
+    <port protocol="tcp" portid="3000"><state state="open"/><service name="http" product="Node.js Express" version=""/></port>
+    <port protocol="tcp" portid="4444"><state state="open"/><service name="krb524" product="" version=""/></port>
+    <port protocol="tcp" portid="5000"><state state="open"/><service name="http" product="Python Flask" version=""/></port>
+    <port protocol="tcp" portid="8888"><state state="open"/><service name="http" product="Jupyter Notebook" version="6.1.4"/></port>
+    <port protocol="tcp" portid="9200"><state state="open"/><service name="http" product="Elasticsearch" version="7.9.0"/></port>
+    <port protocol="tcp" portid="27017"><state state="open"/><service name="mongodb" product="MongoDB" version="4.4.1"/></port>
+  </ports>
+  <os>
+    <osmatch name="Linux 5.4" accuracy="90">
+      <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="90"/>
+    </osmatch>
+  </os>
+</host>
+
+<host starttime="1745600241" endtime="1745600300">
+  <status state="up" reason="echo-reply"/>
+  <address addr="192.168.1.50" addrtype="ipv4"/>
+  <address addr="00:0C:29:AA:BB:05" addrtype="mac" vendor="VMware"/>
+  <hostnames><hostname name="printer01.corp.local" type="PTR"/></hostnames>
+  <ports>
+    <port protocol="tcp" portid="80"><state state="open"/><service name="http" product="HP Printer web interface"/></port>
+    <port protocol="tcp" portid="443"><state state="open"/><service name="https" product="HP Printer web interface"/></port>
+    <port protocol="tcp" portid="161"><state state="open"/><service name="snmp" product="HP printer SNMP" version=""/></port>
+    <port protocol="tcp" portid="515"><state state="open"/><service name="printer" product="HP JetDirect"/></port>
+    <port protocol="tcp" portid="631"><state state="open"/><service name="ipp" product="CUPS"/></port>
+    <port protocol="tcp" portid="9100"><state state="open"/><service name="jetdirect" product="HP JetDirect print server"/></port>
+  </ports>
+  <os>
+    <osmatch name="HP Embedded Jetdirect" accuracy="85">
+      <osclass type="printer" vendor="HP" osfamily="embedded" accuracy="85"/>
+    </osmatch>
+  </os>
+</host>
+
+<host starttime="1745600301" endtime="1745600360">
+  <status state="up" reason="echo-reply"/>
+  <address addr="192.168.1.100" addrtype="ipv4"/>
+  <address addr="00:0C:29:AA:BB:06" addrtype="mac" vendor="VMware"/>
+  <hostnames><hostname name="attacker-pivot.corp.local" type="PTR"/></hostnames>
+  <ports>
+    <port protocol="tcp" portid="22"><state state="open"/><service name="ssh" product="OpenSSH" version="8.9p1"/></port>
+    <port protocol="tcp" portid="4444"><state state="open"/><service name="unknown" product=""/></port>
+    <port protocol="tcp" portid="1337"><state state="open"/><service name="unknown" product=""/></port>
+    <port protocol="tcp" portid="31337"><state state="open"/><service name="unknown" product=""/></port>
+    <port protocol="tcp" portid="9999"><state state="open"/><service name="unknown" product=""/></port>
+    <port protocol="tcp" portid="6666"><state state="open"/><service name="irc" product="" version=""/></port>
+  </ports>
+  <os>
+    <osmatch name="Linux 5.15" accuracy="94">
+      <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="94"/>
+    </osmatch>
+  </os>
+</host>
+
+</nmaprun>
